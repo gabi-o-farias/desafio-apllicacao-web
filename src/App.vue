@@ -1,21 +1,23 @@
 <template>
   <v-app>
-    
+    <toolbar />
+    <v-main>
+      <v-container fluid fill-height>
+        <router-view />
+      </v-container> 
+    </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import { mapGetters } from 'vuex';
+import Toolbar from './components/Toolbar';
 
 export default {
   name: 'App',
-
+  
   components: {
-    HelloWorld,
+    Toolbar,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
