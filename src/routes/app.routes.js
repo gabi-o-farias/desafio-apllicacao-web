@@ -11,11 +11,11 @@ const routes = new router ({
             redirect: '/home',
         },
         {
-          path: '/home',
-          name: 'home',
-          component: () => import ('@viwes/home.vue'),,  
-        },
-    ]
-    })
-
-export default routes;
+            path: '/home',
+            name: 'home',
+            component: () => import('@views/home.vue'),
+          },
+        ]
+      })
+      
+      export default routes;
