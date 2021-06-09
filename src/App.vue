@@ -1,28 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <home />
-  </div>
+  <v-app>
+    
+  </v-app>
 </template>
 
 <script>
-import home from './views/home.vue'
+import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
-  components: {
-    home
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    HelloWorld,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
