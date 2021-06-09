@@ -10,12 +10,11 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import Toolbar from './components/Toolbar';
+import Toolbar from './components/toolbar.vue';
 
 export default {
   name: 'App',
-  
+
   components: {
     Toolbar,
   },
