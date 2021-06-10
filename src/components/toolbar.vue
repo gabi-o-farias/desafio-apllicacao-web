@@ -1,54 +1,57 @@
 <template>
- <div>
-    <v-app-bar
-      color="deep-purple accent-4"
-      dense
-      dark
-    >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Page title</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-menu
-        left
-        bottom
+  <v-row justify="center" no-gutters>
+    <v-col lg="8" md="12" class="tasks-toolbar">
+      <v-app-bar
+        color="transparent"
+        height="80"
+        elevation="0"
+        dark
       >
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            icon
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-icon>mdi-dots-vertical</v-icon>
+        <v-toolbar-title  class="tasks-title">
+          <v-btn color="#e451ff" text to="/" class="button">
+            Tasks
           </v-btn>
-        </template>
+        </v-toolbar-title>
 
-        <v-list>
-          <v-list-item
-            v-for="n in 5"
-            :key="n"
-            @click="() => {}"
-          >
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </v-app-bar>
-  </div>
+        <v-spacer></v-spacer>
+
+        <v-btn text color="#3e3e55" class="buttons">
+          Button
+        </v-btn>
+
+        <v-btn text color="#3e3e55" class="buttons">
+          Button
+        </v-btn>
+      </v-app-bar>
+    </v-col>
+  </v-row>
 </template>
+
 <script>
-export default{
-  name: 'toolbar',
+export default {
+  name: 'Toolbar'
 }
 </script>
 
+<style lang="scss">
+.tasks-toolbar {
+  .tasks-title {
+    color: #e451ff;
+    font-family: 'Ubuntu-Bold';
+
+    .button {
+      text-transform: none;
+    }
+    
+    .v-btn.v-size--default {
+      font-size: 20px;
+    }
+  }
+
+
+  .buttons {
+    text-transform: none;
+    font-family: 'Ubuntu-Regular';
+  }
+}
+</style>
