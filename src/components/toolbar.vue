@@ -9,7 +9,7 @@
       >
         <v-toolbar-title  class="tasks-title">
           <v-btn color="#e451ff" text to="/" class="button">
-            Tasks
+            Opcoes
           </v-btn>
         </v-toolbar-title>
 
