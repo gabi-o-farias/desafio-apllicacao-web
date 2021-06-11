@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'Toolbar'
+  name: 'toolbar'
 }
 </script>
 

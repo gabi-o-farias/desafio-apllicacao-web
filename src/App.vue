@@ -4,19 +4,33 @@
     <v-main>
       <v-container fluid fill-height>
         <router-view />
-      </v-container> 
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Toolbar from './components/toolbar.vue';
+import { mapGetters } from 'vuex';
+import Toolbar from './components/toolbar';
 
 export default {
   name: 'App',
 
   components: {
     Toolbar,
+  },
+
+  computed: {
+    ...mapGetters([
+      'currentUser',
+    ]),
+  },
+  watch: {
+    currentUser(currentUser) {
+      if (currentUser) {
+        this.$router.push('/dashboard');
+      }
+    },
   },
 };
 </script>

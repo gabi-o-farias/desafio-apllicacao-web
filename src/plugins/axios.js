@@ -3,7 +3,7 @@ import axios from 'axios';
 const baseConfig = {
     baseURL: `https://tasks.googleapis.com`,
     headers: {
-        Authorization: `Bearer {token }`
+        Authorization: `Bearer {token}`
     }
   }
   
